@@ -5,7 +5,6 @@ import { FC, useState, useRef } from 'react';
 import { Connection } from '@solana/web3.js';
 import { RPC_ENDPOINT } from '@/config/env';
 import { createNFT } from '@/utils/nft';
-import { WalletButton } from './WalletButton';
 
 export const MintNFT: FC = () => {
     const { wallet, publicKey } = useWallet();
@@ -52,7 +51,6 @@ export const MintNFT: FC = () => {
 
     return (
         <div className="flex flex-col items-center gap-4 p-4">
-            <WalletButton />
             {publicKey && (
                 <>
                     <div className="flex flex-col items-center gap-2">
